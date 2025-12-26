@@ -10,7 +10,7 @@ class Calculator:
         }
         self.precedence = {
             "+": 1,
-            "-": 1,
+            "-": 1,  # Changed precedence of '-' to 1
             "*": 2,
             "/": 2,
         }
@@ -50,12 +50,11 @@ class Calculator:
 
     def _apply_operator(self, operators, values):
         if not operators:
-            return
+            raise ValueError("No operators to apply")
+        if len(values) < 2:
+            raise ValueError("Not enough operands for operator")
 
         operator = operators.pop()
-        if len(values) < 2:
-            raise ValueError(f"not enough operands for operator {operator}")
-
         b = values.pop()
         a = values.pop()
         values.append(self.operators[operator](a, b))
