@@ -2,10 +2,10 @@
 
 ## Description
 This project is based off a course given by Boot.dev. This project created an AI agent that is able to identify bugs in a python project, i.e. Calculator, and fix said bugs. The agent has 4 tools that it can use to complete it's tasks.
-    - get\_files\_info: List a directory, its subdirectories and their files to see what is in the project.
-    - get\_file\_content: Reads the content of the file for later use of the agent.
-    - run\_python\_file: Executes a python script.
-    - write\_file: Writes content to a specified file.
+- get\_files\_info: List a directory, its subdirectories and their files to see what is in the project.
+- get\_file\_content: Reads the content of the file for later use of the agent.
+- run\_python\_file: Executes a python script.
+- write\_file: Writes content to a specified file.
 
 The base of this AI agent is Google's Gemini models and api. Specfically, this project uses Gemini Flash 2.5 model for the agent. The following set-up guidelines is based on a Ubuntu-based system.
 
